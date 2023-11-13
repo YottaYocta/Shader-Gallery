@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8r1ehqljyqka"]
+
+[ext_resource type="Shader" path="res://shaders/ColorShift.gdshader" id="1_7466r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5iam"]
+shader = ExtResource("1_7466r")
+shader_parameter/color1 = Color(0.45098, 0.627451, 1, 1)
+shader_parameter/color2 = Color(0.92549, 0.156863, 0.270588, 1)
+shader_parameter/exponent = 2.0
+shader_parameter/frequency = 0.2
+
+[node name="ColorShift" type="ColorRect"]
+material = SubResource("ShaderMaterial_x5iam")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
